@@ -1,0 +1,26 @@
+# Django-specific
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Virtual environment
+env/
+
+# VSCode or other IDE settings (optional)
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+env/
+
+# Migrations (optional: you may want to keep these)
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# Static files (optional if generated)
+staticfiles/
