@@ -6,6 +6,7 @@ from django.views import View
 from django.views.generic import ListView
 
 
+
 # Create your views here.
 
 def home(request):
@@ -104,5 +105,4 @@ def drinks(request, drink_name):
 def display_menu_item(request, menu_id):
     menu_item = get_object_or_404(Menu, pk=menu_id)
     return render(request, 'menu_items.html', {'menu_item': menu_item})
-
 
