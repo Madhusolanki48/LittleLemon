@@ -87,6 +87,18 @@ def getform(request):
         return HttpResponse("Name:{} UserID:{}".format(name, id))
     else:
         return HttpResponse("Please submit the form via POST.")
+    
+
+# Mapping URLs with Params
+def drinks(request, drink_name):
+    drink = {
+        'mocha': 'type of coffee',
+        'tea': 'type of beverage',
+        'lemonade': 'type of refreshment',
+        'cola': 'type of soda',
+    }
+    choice_of_drink = drink.get(drink_name, 'Unknown drink')
+    return HttpResponse(f"<h2>{drink_name}</h2>{choice_of_drink}")
 
 
 

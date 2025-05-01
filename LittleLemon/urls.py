@@ -23,5 +23,7 @@ urlpatterns = [
     # To handle form submission
     path('showform/', views.showform, name='showform'),
     path('getform/', views.getform, name='getform'),
-
+ 
+    # Mapping URLs with params
+    path('drinks/<str:drink_name>', views.drinks, name='drink_name'),
 ]
