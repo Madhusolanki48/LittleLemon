@@ -64,3 +64,30 @@ def index(request):
     return HttpResponse(content)
 
 
+# Parameters 
+
+def pathview(request, name, id):        #path parameter
+    return HttpResponse(f"Name: {name} UserID: {id}")
+
+def qryview(request):                  #Query parameter
+    name = request.GET.get('name')
+    user_id = request.GET.get('id')
+    return HttpResponse(f"Name: {name} UserID: {user_id}")
+
+#showform and getform functions
+# This view renders the form
+def showform(request):
+    return render(request, "form.html")
+
+# This view handles the form submission
+def getform(request): 
+    if request.method == "POST": 
+        id = request.POST['id'] 
+        name = request.POST['name'] 
+        return HttpResponse("Name:{} UserID:{}".format(name, id))
+    else:
+        return HttpResponse("Please submit the form via POST.")
+
+
+
+

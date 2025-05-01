@@ -15,4 +15,13 @@ urlpatterns = [
 
     # Request and Response
     path('demo/', views.index, name='index'), 
+
+    # Parameters
+    path('getuser/<str:name>/<int:id>/', views.pathview, name='pathview'),   #Path parameters
+    path('getuser/', views.qryview, name='qryview'),     #Query parameters
+
+    # To handle form submission
+    path('showform/', views.showform, name='showform'),
+    path('getform/', views.getform, name='getform'),
+
 ]
