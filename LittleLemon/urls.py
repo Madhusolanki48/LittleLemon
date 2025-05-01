@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
@@ -26,4 +26,8 @@ urlpatterns = [
  
     # Mapping URLs with params
     path('drinks/<str:drink_name>', views.drinks, name='drink_name'),
+
+    # Regular Expressions or RegEx
+    # path('menu_item/10',views.display_menu_item),
+    re_path(r'^menu_item/([0-9]{2})/$',views.display_menu_item),
 ]

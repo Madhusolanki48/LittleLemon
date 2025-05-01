@@ -100,6 +100,9 @@ def drinks(request, drink_name):
     choice_of_drink = drink.get(drink_name, 'Unknown drink')
     return HttpResponse(f"<h2>{drink_name}</h2>{choice_of_drink}")
 
-
+# Regular Expression
+def display_menu_item(request, menu_id):
+    menu_item = get_object_or_404(Menu, pk=menu_id)
+    return render(request, 'menu_items.html', {'menu_item': menu_item})
 
 
