@@ -106,3 +106,8 @@ def display_menu_item(request, menu_id):
     menu_item = get_object_or_404(Menu, pk=menu_id)
     return render(request, 'menu_items.html', {'menu_item': menu_item})
 
+# handle error demo
+# def handler404(request,exception):
+#     return HttpResponse("404:Page not Found!")
+# def home(request):
+#     return HttpResponse("Little Lemon !")
