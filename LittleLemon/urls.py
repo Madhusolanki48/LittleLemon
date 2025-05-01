@@ -12,4 +12,7 @@ urlpatterns = [
     # Class-Based Views (CBVs)
     path('menus/', views.MenuListView.as_view(), name='menu_list'),
     path('myview/', views.MyView.as_view(), name='my_view'),
+
+    # Request and Response
+    path('demo/', views.index, name='index'), 
 ]

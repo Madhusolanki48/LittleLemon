@@ -49,5 +49,18 @@ class MyView(View):
         # Logic to process POST request
         return HttpResponse('Response to POST request')
 
+# Request and Response Objects
+def index(request):
+    # Getting the request path and method
+    path = request.path
+    method = request.method
+    # Creating the content to display
+    content = '''
+    <center><h2>Testing Django Request Response Objects</h2>
+    <p>Request path : " {}</p>
+    <p>Request Method :{}</p></center>
+    '''.format(path, method)
+    # Returning an HttpResponse with the content
+    return HttpResponse(content)
 
 
